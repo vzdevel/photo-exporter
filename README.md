@@ -34,8 +34,10 @@
 
 ---
 
-## Documentation Index
+## Documentation & Site
 
+- **Landing Page**: https://vzdevel.github.io/photo-exporter/
+- **Privacy Policy**: https://vzdevel.github.io/photo-exporter/privacy.html
 - **[ARCHITECTURE.md](./ARCHITECTURE.md)**: System design, architecture patterns, service layer breakdown, data flow, and model definitions.
 - **[FINDINGS_AND_KNOWHOW.md](./FINDINGS_AND_KNOWHOW.md)**: Deep technical findings, ImageIO nuances, PNG XMP compatibility on physical iOS, SMB2 implementation notes, and compiler stability fixes.
 

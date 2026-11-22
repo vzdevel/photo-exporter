@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo Exporter — Privacy-First iOS EXIF &amp; Media Exporter</title>
+  <meta name="description" content="Inspect, adjust, organize, and losslessly export photos and videos from your iOS Photo Library, Local Folders, Google Drive, and Samba (SMB2) shares.">
+  <link rel="icon" type="image/png" href="./assets/app-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a class="brand" href="./index.html">
+        <img src="./assets/app-icon.png" alt="Photo Exporter App Icon">
+        <span>Photo Exporter</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="./index.html" class="active">Overview</a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="https://github.com/vzdevel/photo-exporter">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="hero-icon" src="./assets/app-icon.png" alt="Photo Exporter Icon">
+        <span class="pill">iOS • SwiftUI • Lossless ImageIO • Open Source</span>
+        <h1>Export photos &amp; videos with accurate timestamps, timezones, and GPS intact.</h1>
+        <p>
+          <strong>Photo Exporter</strong> is an on-device iOS utility for inspecting EXIF metadata,
+          correcting missing timezones, organizing exports by date, and transferring originals without
+          recompression to Local Files, Google Drive, Google Photos, or Samba (SMB2) shares.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/vzdevel/photo-exporter">View Source on GitHub</a>
+          <a class="btn btn-secondary" href="./privacy.html">Read Privacy Policy</a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="features-heading">
+        <h2 id="features-heading" class="section-title">Built for Photographic Fidelity</h2>
+        <p class="section-subtitle">
+          Zero cloud intermediaries, zero image bloat, and native protocol implementations directly in Swift.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Lossless Metadata Embedding</h3>
+            <p>
+              Updates EXIF, TIFF, GPS, XMP, and QuickTime creation metadata via
+              <code>CGImageDestinationCopyImageSource</code> without re-encoding image pixels or inflating file sizes.
+              Includes raw TIFF SubIFD parsing for RAW/DNG offsets and explicit PNG XMP compatibility on iOS.
+            </p>
+            <div class="tag-list">
+              <span class="tag">JPEG / HEIC</span>
+              <span class="tag">PNG XMP</span>
+              <span class="tag">DNG / MOV / MP4</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Timezone Inference &amp; Batch Edits</h3>
+            <p>
+              Automatically distinguishes native EXIF dates from Photos app adjustments, detects photos
+              missing timezone offsets, and infers offsets from adjacent shots or location metadata.
+              Apply batch date, timezone, and GPS corrections cleanly.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Offset Inference</span>
+              <span class="tag">Batch Editing</span>
+              <span class="tag">Map Inspector</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Multi-Source Media Browser</h3>
+            <p>
+              Switch seamlessly between the iOS <strong>Photo Library</strong>, local security-scoped folders,
+              <strong>Google Drive</strong> folders, and <strong>Samba (SMB2)</strong> shares—with in-place rename,
+              90° rotation, deletion, and metadata application.
+            </p>
+            <div class="tag-list">
+              <span class="tag">PhotoKit</span>
+              <span class="tag">Local Files</span>
+              <span class="tag">Drive &amp; SMB2</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Smart Folder &amp; Conflict Resolution</h3>
+            <p>
+              Organize exported assets using customizable tokens (<code>yyyy</code>, <code>yyyy-MM</code>,
+              <code>yyyy/MM</code>). Pre-export analysis skips matching destination files and previews
+              grouped <code>[Destination]</code>, <code>[Original]</code>, and <code>[Renamed]</code> families.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Dedup Engine</span>
+              <span class="tag">Subfolder Tokens</span>
+              <span class="tag">Preview &amp; Override</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Direct Cloud &amp; Pure-Swift SMB2</h3>
+            <p>
+              Streams uploads straight to Google Drive (<code>uploadType=resumable</code>), Google Photos,
+              or your local NAS via a pure-Swift SMB2 client over BSD sockets—with
+              <code>BGContinuedProcessingTask</code> support and persistent failed-item retry.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Resumable Uploads</span>
+              <span class="tag">Pure Swift SMB2</span>
+              <span class="tag">Background Tasks</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Fullscreen Viewer &amp; Range Streaming</h3>
+            <p>
+              Features swipeable high-resolution photo zoom, native <code>AVPlayerViewController</code> playback,
+              smooth fullscreen expand-and-rotate transitions, Edited vs. Original comparison, and
+              HTTP Range streaming for remote Google Drive videos.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Zoomable Viewer</span>
+              <span class="tag">AVPlayer</span>
+              <span class="tag">HTTP Range Stream</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="privacy-banner">
+          <div>
+            <h2>100% On-Device &amp; Transparent</h2>
+            <p>
+              Photo Exporter runs no developer servers, collects no analytics, and connects directly from your
+              iPhone to the local folders, SMB shares, or Google accounts you authorize.
+            </p>
+          </div>
+          <a class="btn btn-secondary" href="./privacy.html">View Privacy Policy</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Photo Exporter • MIT License</span>
+      <div class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="https://github.com/vzdevel/photo-exporter">GitHub Repository</a>
+        <a href="https://github.com/vzdevel/photo-exporter/blob/main/ARCHITECTURE.md">Architecture</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

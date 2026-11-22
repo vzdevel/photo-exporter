@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Photo Exporter</title>
+  <meta name="description" content="Privacy Policy for Photo Exporter for iOS, including local processing, Photo Library, Location metadata, Samba shares, and Google API Services User Data disclosure.">
+  <link rel="icon" type="image/png" href="./assets/app-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a class="brand" href="./index.html">
+        <img src="./assets/app-icon.png" alt="Photo Exporter App Icon">
+        <span>Photo Exporter</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="./index.html">Overview</a>
+        <a href="./privacy.html" class="active">Privacy Policy</a>
+        <a href="https://github.com/vzdevel/photo-exporter">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="legal-card">
+        <h1>Privacy Policy</h1>
+        <p class="legal-meta">Effective Date: November 22, 2026 &nbsp;•&nbsp; App: Photo Exporter (iOS)</p>
+
+        <p>
+          <strong>Photo Exporter</strong> is an open-source, privacy-first iOS utility. Everything the app does runs
+          directly on your device and communicates solely with the storage services or servers that you explicitly configure.
+        </p>
+
+        <h2>1. No Developer Servers or Telemetry</h2>
+        <ul>
+          <li>Photo Exporter operates <strong>no developer-hosted backend servers</strong>.</li>
+          <li>We do <strong>not</strong> collect, track, sell, or share analytics, usage telemetry, advertising identifiers, or personal data.</li>
+          <li>All media inspection, EXIF/QuickTime metadata editing, duplicate checks, and file exports execute locally on your iOS device.</li>
+        </ul>
+
+        <h2>2. Photo Library &amp; Local File Access</h2>
+        <ul>
+          <li><strong>iOS Photo Library:</strong> With your permission, the app reads and modifies photos, videos, and their metadata via Apple's PhotoKit APIs solely to browse your library, display metadata, apply edits you initiate, delete items you choose to delete, and export originals.</li>
+          <li><strong>Local Folders:</strong> Folder access granted through Apple's document picker uses iOS Security-Scoped Bookmarks saved locally on your device so you can browse or export to folders you explicitly pick.</li>
+        </ul>
+
+        <h2>3. Location Data</h2>
+        <ul>
+          <li>Photo Exporter does <strong>not</strong> track or collect your live device GPS location in the background.</li>
+          <li>The app reads GPS coordinates already embedded in your photos/videos (or coordinates you enter while editing metadata) exclusively on-device to display maps and reverse-geocode human-readable place names through Apple's <code>CLGeocoder</code> service.</li>
+        </ul>
+
+        <h2>4. Google API Services (Google Drive &amp; Google Photos)</h2>
+        <p>
+          If you choose to sign in with Google via <code>ASWebAuthenticationSession</code> (OAuth 2.0 with PKCE),
+          Photo Exporter requests only the scopes needed for the integrations you use:
+        </p>
+        <ul>
+          <li><strong>Google Drive</strong> (<code>https://www.googleapis.com/auth/drive</code>): Used strictly to browse your selected Drive folders, load authenticated thumbnails/media previews, stream videos, check existing filenames for duplicate prevention, upload exported photos/videos, and perform in-app file rename/rotation/deletion actions you request.</li>
+          <li><strong>Google Photos</strong> (<code>https://www.googleapis.com/auth/photoslibrary.appendonly</code>): Used strictly to upload exported photos and videos into your Google Photos library when you choose Google Photos as an export target.</li>
+        </ul>
+        <p>
+          <strong>Google API Services User Data Policy (Limited Use):</strong> Photo Exporter's use and transfer of
+          information received from Google APIs strictly adhere to the
+          <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+          including the Limited Use requirements. OAuth access tokens, refresh tokens, and account metadata are stored
+          <strong>only locally inside the app's iOS sandbox</strong> on your device and are never transmitted to developer
+          servers, shared with third parties, or used for advertising, profiling, or AI/ML model training.
+        </p>
+
+        <h2>5. Samba (SMB2) Network Shares</h2>
+        <p>
+          If you configure a Samba (SMB2) destination, host addresses, share paths, and credentials are stored locally on
+          your device inside the app sandbox and are used only to open direct network connections to your specified server.
+        </p>
+
+        <h2>6. Local Caches, Retention &amp; Revocation</h2>
+        <ul>
+          <li><strong>Metadata Caches:</strong> Extracted media metadata and folder listings are cached locally in your device's <code>Application Support</code> directory for performance. Folder/remote caches older than 30 days and orphaned temporary files are automatically cleaned up on startup.</li>
+          <li><strong>Deleting Local Data:</strong> Removing an account/destination in the app deletes its local configuration, and uninstalling Photo Exporter removes all app-stored tokens, caches, and bookmarks from your device.</li>
+          <li><strong>Revoking Google Access:</strong> You can revoke Photo Exporter's Google OAuth permissions at any time via your <a href="https://myaccount.google.com/permissions">Google Account Permissions</a> page.</li>
+        </ul>
+
+        <h2>7. Contact</h2>
+        <p>
+          If you have questions about this Privacy Policy or how Photo Exporter handles data, please open an issue on
+          <a href="https://github.com/vzdevel/photo-exporter/issues">GitHub</a> or email
+          <a href="mailto:vincentzdeveloper@gmail.com">vincentzdeveloper@gmail.com</a>.
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>Photo Exporter • MIT License</span>
+      <div class="footer-links">
+        <a href="./index.html">Overview</a>
+        <a href="https://github.com/vzdevel/photo-exporter">GitHub Repository</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
