@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode & local build artifacts
+build/
+build_*/
+DerivedData/
+*.o
+.o
+*.ipa
+*.dSYM
+*.dSYM.zip
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+
+# Local signing & OAuth secrets (copy from *.example templates)
+Local.xcconfig
+Photo Exporter/GoogleService-Info.plist
+
+# Personal prompt log
+PROMPTS.md

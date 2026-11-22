@@ -1,0 +1,7 @@
+// Shared build configuration defaults for public source builds.
+// Copy Local.xcconfig.example to Local.xcconfig (gitignored) to override with your own
+// Apple Developer Team ID and Bundle Identifier without modifying tracked project files.
+DEVELOPMENT_TEAM =
+PRODUCT_BUNDLE_IDENTIFIER = com.example.Photo-Exporter
+
+#include? "Local.xcconfig"
